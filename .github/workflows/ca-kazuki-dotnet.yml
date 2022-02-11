@@ -48,7 +48,7 @@ jobs:
 
           echo "Starting Deploying"
 
-          az containerapp update --name ${{ env.CONTAINER_APP_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} -i ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.PROJECT_NAME_FOR_DOCKER }}:${{ github.sha }} --registry-login-server ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }} --registry-username  ${{ secrets.REGISTRY_USERNAME }} --registry-password ${{ secrets.REGISTRY_PASSWORD }} --debug
+          az containerapp update --name ${{ env.CONTAINER_APP_NAME }} --resource-group ${{ env.CONTAINER_APP_RESOURCE_GROUP_NAME }} -i ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.PROJECT_NAME_FOR_DOCKER }}:${{ github.sha }} --registry-login-server ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }} --registry-username  ${{ secrets.crkazuki_USERNAME_FFFF }} --registry-password ${{ secrets.crkazuki_PASSWORD_FFFF }} --debug
     - name: logout
       run: >
         az logout
